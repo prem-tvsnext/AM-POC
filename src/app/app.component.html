@@ -1,9 +1,10 @@
 <header>
   <mat-toolbar color="primary">
     <span class="ss-spacer"></span>
-    <mat-icon >apps</mat-icon>
+    <mat-icon>apps</mat-icon>
     <button mat-button [matMenuTriggerFor]="usermenu">
-      <mat-icon class="ss-user">account_circle</mat-icon> Antony <mat-icon>arrow_drop_down</mat-icon>
+      <mat-icon class="ss-user">account_circle</mat-icon> Antony
+      <mat-icon>arrow_drop_down</mat-icon>
     </button>
     <mat-menu #usermenu="matMenu">
       <button mat-menu-item>Profile</button>
@@ -12,42 +13,905 @@
   </mat-toolbar>
 </header>
 <div class="wrapper">
-  <mat-toolbar>
-    <h4>New Business - Boat Info</h4>
-    <mat-select >
-        <mat-option>None</mat-option>
-        <mat-option value="option1">Option 1</mat-option>
+  <div>
+    <mat-toolbar>
+      <span class="headerColor">
+        <h4>New Business - Boat Info</h4>
+      </span>
+      <div>
+        
+      </div>
+      <mat-select class="menuSelect">
+        <mat-option value="option1">Event Log</mat-option>
         <mat-option value="option2">Option 2</mat-option>
         <mat-option value="option3">Option 3</mat-option>
       </mat-select>
-      <mat-select >
-          <mat-option>None</mat-option>
-          <mat-option value="option1">Option 1</mat-option>
+      <mat-select class="menuSelect">
+        <mat-option value="option1">Print</mat-option>
+        <mat-option value="option2">Option 2</mat-option>
+        <mat-option value="option3">Option 3</mat-option>
+      </mat-select>
+      <mat-select class="menuSelect">
+        <mat-option value="option1">UW Review</mat-option>
+        <mat-option value="option2">Option 2</mat-option>
+        <mat-option value="option3">Option 3</mat-option>
+      </mat-select>
+      <mat-select class="menuSelect">
+        <mat-option value="option1">More</mat-option>
+        <mat-option value="option2">Option 2</mat-option>
+        <mat-option value="option3">Option 3</mat-option>
+      </mat-select>
+      <span class="ss-spacer"></span>
+      <div>
+        <button class="buttonMenu" mat-raised-button>
+          <mat-icon>mail</mat-icon>
+        </button>
+        <button class="buttonMenu" mat-raised-button>
+          <mat-icon>call</mat-icon>
+        </button>
+        <button class="buttonMenu" mat-raised-button>
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button class="buttonMenu" mat-raised-button>
+          <mat-icon>save</mat-icon>
+        </button>
+        <button class="buttonMenu" mat-raised-button>
+          <mat-icon>create</mat-icon>
+        </button>
+        <button class="buttonMenu" mat-raised-button>
+          <mat-icon>bookmark</mat-icon>
+        </button>
+        <button class="buttonMenu" mat-raised-button>
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar>
+    <mat-toolbar class="divBackgroud">
+      <span class="fontDetail label">Effective</span>
+      <mat-form-field class="calenderSize">
+        <input matInput [matDatepicker]="myDatepicker">
+        <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+        <mat-datepicker #myDatepicker></mat-datepicker>
+      </mat-form-field>
+      <span class="fontDetail label labelN">App.No</span>
+      <mat-form-field class="calenderSize">
+        <input matInput>
+      </mat-form-field>
+      <span class="fontDetail  label labelN">Quote ver No.</span>
+      <mat-form-field class="calenderSize quoteSelect">
+        <mat-select>
+          <mat-option value="option1">01 10/27/2017 Full Quote with Hull and lab</mat-option>
           <mat-option value="option2">Option 2</mat-option>
           <mat-option value="option3">Option 3</mat-option>
         </mat-select>
-        <mat-select >
-            <mat-option>None</mat-option>
-            <mat-option value="option1">Option 1</mat-option>
-            <mat-option value="option2">Option 2</mat-option>
-            <mat-option value="option3">Option 3</mat-option>
-          </mat-select>
-          <mat-select >
-              <mat-option>None</mat-option>
-              <mat-option value="option1">Option 1</mat-option>
-              <mat-option value="option2">Option 2</mat-option>
-              <mat-option value="option3">Option 3</mat-option>
+      </mat-form-field>
+      <mat-form-field class="calenderSize labelN">
+        <input matInput value="BOATER'S SEL">
+      </mat-form-field>
+  
+      <mat-form-field class="calenderSize labelN">
+        <input matInput value="Pending">
+      </mat-form-field>
+      <span class="ss-spacer"></span>
+      <button mat-button class="quotebtn" color="warn">Quote</button>
+      <mat-form-field class="calenderSize labelN">
+        <input matInput value="$1,503.43">
+      </mat-form-field>
+  
+      <button mat-raised-button class="labelN" color="warn">Rate Quote
+  
+      </button>
+    </mat-toolbar>
+  </div>
+ <div class="wrapper-content">
+   <div class="wrapper-content-col">
+      <mat-toolbar class="divBackgroud toobar1">
+          <span class="headerColor">Boats On Policy</span>
+          <span class="ss-spacer"></span>
+          <mat-icon>view_module</mat-icon>
+      </mat-toolbar>
+      <div class="box">
+          <mat-card class="card">
+              <mat-toolbar class="toolbar2">
+                  <span style="color:rgb(63,81,181);">
+                    <b> Boat Information</b>
+                  </span>
+                  <span class="ss-spacer"></span>
+                  <span>Year of Mfg</span>
+                  <mat-form-field class="example-full-width" style="width:80px">
+                    <input matInput value="2012">
+                  </mat-form-field>
+                </mat-toolbar>
+                <table style="width: 100%;" class="table1">
+                  <tr>
+                    <td >
+                      Quote Ver No.
+                    </td>
+                    <td colspan="3">
+                        <mat-form-field>
+                          <mat-select placeholder="01 10/27/2017 Full Quote with Hull and liab">
+                          </mat-select>
+                        </mat-form-field>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        Length
+                    </td>
+                    <td>
+                        <mat-form-field >
+                            <input matInput value="27">
+                          </mat-form-field>
+                    </td>
+                    <td>
+                        Top Speed
+                    </td>
+                    <td>
+                        <mat-form-field >
+                            <input matInput value="45">
+                          </mat-form-field>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Hull Type
+                    </td>
+                    <td>
+                      <mat-form-field>
+                        <mat-select placeholder="Position">
+                        </mat-select>
+                      </mat-form-field>
+                    </td>
+                    <td>
+                        Material
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <mat-select placeholder="Fiberglass">
+                            </mat-select>
+                          </mat-form-field>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Power
+                    </td>
+                    <td>
+                        <mat-form-field >
+                            <mat-select placeholder="Inboard">
+                            </mat-select>
+                          </mat-form-field>
+                    </td>
+                    <td>
+                        Fuel
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <mat-select placeholder="Gas">
+                            </mat-select>
+                          </mat-form-field>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="4">
+                      <table style="width:100%">
+                        <tr>
+                          <td>
+                              #Engine
+                          </td>
+                          <td>
+                              <mat-form-field>
+                                  <input matInput value="Inboard">
+                                </mat-form-field>
+                          </td>
+                          <td>
+                              Total HP
+                          </td>
+                          <td>
+                              <mat-form-field>
+                                  <input matInput value="310">
+                                </mat-form-field>
+                          </td>
+                          <td>
+                            Boat Storage
+                          </td>
+                          <td>
+                              <mat-form-field>
+                                <mat-select placeholder="Trailer">
+                                </mat-select>
+                              </mat-form-field>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          Purchase Price
+                      </td>
+                      <td>
+                          <mat-form-field>
+                              <input matInput value="27">
+                            </mat-form-field>
+                      </td>
+                      <td>
+                          Purchase Dt
+                      </td>
+                      <td>
+                          <mat-form-field>
+                              <input matInput value="">
+                            </mat-form-field>
+                      </td>
+                  </tr>
+                </table>
+            </mat-card>
+            <mat-card class="card">
+                <div>
+                  <span style="color:rgb(63,81,181);">
+                    <b> Boat location</b>
+                  </span>
+                  <mat-form-field style="width:70px">
+                    <mat-select placeholder="Marina/Others">
+                    </mat-select>
+                  </mat-form-field>
+                  <mat-checkbox style="margin-left:10px">US</mat-checkbox>
+                  <span style="margin-left:10px">State Filter</span>
+                  <mat-form-field class="example-full-width" style="width:50px">
+                    <input matInput value="TX">
+                  </mat-form-field>
+                </div>
+                <div>
+                  <span>
+                    Marina Name
+                  </span>
+                  <mat-form-field>
+                    <input matInput value="Marina Express">
+                  </mat-form-field>
+                </div>
+                <div>
+                  <span>
+                    Address Line 1
+                  </span>
+                  <mat-form-field>
+                    <input matInput value="4511 Industrial Avenue">
+                  </mat-form-field>
+                </div>
+                <div>
+                  <span>
+                    Address Line 2
+                  </span>
+                  <mat-form-field>
+                    <input matInput value="">
+                  </mat-form-field>
+                </div>
+                <div>
+                  <span>
+                    City & State
+                  </span>
+                  <mat-form-field style="width:100px">
+                    <input matInput value="Midland">
+                  </mat-form-field>
+                  <mat-form-field style="width:50px; margin-left:10px">
+                    <input matInput value="TX">
+                  </mat-form-field>
+                </div>
+                <div>
+                  <span>
+                    Zip Code
+                  </span>
+                  <mat-form-field style="width:60px">
+                    <input matInput value="79736">
+                  </mat-form-field>
+                  <span style="margin-left:10px">+4</span>
+                  <mat-form-field style="width:50px;">
+                    <input matInput value="">
+                  </mat-form-field>
+                  <span style="margin-left:10px">Country</span>
+                  <mat-form-field style="width:50px">
+                    <input matInput value="45">
+                  </mat-form-field>
+                </div>
+                <div>
+                  <span>
+                    Phone
+                  </span>
+                  <mat-form-field style="width:100px">
+                    <input matInput value="432-530-0020">
+                  </mat-form-field>
+                  <span style="margin-left:10px">Fax</span>
+                  <mat-form-field style="margin-left:10px; width:100px">
+                    <input matInput value="">
+                  </mat-form-field>
+                </div>
+                <div>
+                  <span>
+                    Email
+                  </span>
+                  <mat-form-field>
+                    <input matInput value="">
+                  </mat-form-field>
+                </div>
+                <div>
+                  <span>
+                    Navigate Limits
+                  </span>
+                  <mat-form-field>
+                    <mat-select placeholder="Island Waters">
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </mat-card>
+        </div>
+   </div>
+   <div class="wrapper-content-col">
+      <mat-toolbar class="divBackgroud toobar1">
+          <mat-select class="menuSelect1" placeholder="2012 250 Cabana">
             </mat-select>
-    <span class="ss-spacer"></span>
-    <button mat-raised-button color="warn">PreBind<mat-icon>chevron_right</mat-icon></button>
-  </mat-toolbar>
-  <mat-toolbar></mat-toolbar>
-  <mat-toolbar></mat-toolbar>
+      </mat-toolbar>
+      <div class="box">
+          <mat-card class="card">
+              <mat-toolbar class="toolbar2">
+                <span style="color:rgb(63,81,181);">
+                  <b> Boat Operators</b>
+                </span>
+                <span class="ss-spacer"></span>
+                <button mat-raised-button color="warn" style="margin-left:80px">
+                  Add
+                </button>
+              </mat-toolbar>
+              <div style="margin-top:5px">
+                <table cellspacing="0" cellpadding=0 class="table">
+                  <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Primary</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <mat-icon>view_module</mat-icon>
+                    </td>
+                    <td>Adam Coy</td>
+                    <td>Yes</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <mat-icon>view_module</mat-icon>
+                    </td>
+                    <td>Franklin Terry</td>
+                    <td>No</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <mat-icon>view_module</mat-icon>
+                    </td>
+                    <td>Franklin Coy</td>
+                    <td>No</td>
+                  </tr>
+                </table>
+              </div>
+            </mat-card>
+            <mat-card class="card">
+                <mat-toolbar class="toolbar2">
+                    <span style="color:rgb(63,81,181);">
+                      <b>Boat Underwriting Information</b>
+                    </span>
+                  </mat-toolbar>
+                <div>
+                  <span>
+                    Any Boat Claims or Accidents in the last 3 Years?
+                  </span>
+                  <mat-toolbar class="toolbar2">
+                    <mat-radio-group>
+                      <mat-radio-button value="1" checked="true">Yes</mat-radio-button>
+                      <mat-radio-button value="2">No</mat-radio-button>
+                    </mat-radio-group>
+                    <span class="ss-spacer"></span>
+                    <button mat-button class="quotebtn" color="warn">Claim Details</button>
+                  </mat-toolbar>
+                  <table cellspacing="0" cellpadding=0 class="table">
+                    <tr>
+                      <th >Answer all questions</th>
+                      <th >Yes</th>
+                      <th >No</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        Will this vessel be used for racing?
+                      </td>
+                      <td colspan="2">
+                        <mat-radio-group>
+                          <mat-radio-button value="1"></mat-radio-button>
+                          <mat-radio-button value="2" checked="true"></mat-radio-button>
+                        </mat-radio-group>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Do you live abroad with this vessel?
+                      </td>
+                      <td colspan="2">
+                        <mat-radio-group>
+                          <mat-radio-button value="1"></mat-radio-button>
+                          <mat-radio-button value="2" checked="true"></mat-radio-button>
+                        </mat-radio-group>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Do you use the vessel for any purpose other than private pleasure?
+                      </td>
+                      <td colspan="2">
+                        <mat-radio-group>
+                          <mat-radio-button value="1"></mat-radio-button>
+                          <mat-radio-button value="2" checked="true"></mat-radio-button>
+                        </mat-radio-group>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Is vessel insured under an inforce policy?
+                      </td>
+                      <td colspan="2">
+                        <mat-radio-group>
+                          <mat-radio-button value="1"></mat-radio-button>
+                          <mat-radio-button value="2" checked="true"></mat-radio-button>
+                        </mat-radio-group>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </mat-card>
+        </div>
+    </div>
+    <div class="wrapper-content-col ">
+        <mat-toolbar class="divBackgroud toobar1">
+            <button mat-raised-button color="warn">Add New</button>
+        </mat-toolbar>
+        <div class="box">
+            <div>
+              <mat-card style="margin-top:5px">
+               
+         <div>
+      
+                <div style="height:180px; overflow-x:auto">
+                  <span style="color:rgb(63,81,181);">
+                    <b> Boat Coverages</b>
+                  </span>
+                  <mat-form-field style="margin-left:25px">
+                    <mat-select placeholder="Agreed Value hull">
+                    </mat-select>
+                  </mat-form-field>
+                  <div>
+                    <table cellspacing="0" cellpadding=0 style="width:400px; margin-top:5px; margin-left:-10px">
+                      <tr>
+                        <td>
+                          <mat-checkbox checked="true"></mat-checkbox>
+                        </td>
+                        <td style="margin-left:5px; width:300px">
+                          <span>Hull- Agreed Hull Value</span>
+                        </td>
+                        <td>
+                          <mat-icon>view_module</mat-icon>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="83.500">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <mat-select placeholder="1% 250 min">
+                            </mat-select>
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="484.00">
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <mat-checkbox checked="true"></mat-checkbox>
+                        </td>
+                        <td style="margin-left:5px; width:300px">
+                          <span>Commercial Towing</span>
+                        </td>
+                        <td>
+                          <mat-icon>view_module</mat-icon>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <mat-select placeholder="250">
+                            </mat-select>
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="0.00">
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <mat-checkbox checked="true"></mat-checkbox>
+                        </td>
+                        <td style="margin-left:5px; width:300px">
+                          <span>Boat Liab</span>
+                        </td>
+                        <td>
+                          <mat-icon>view_module</mat-icon>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <mat-select placeholder="100K/300K">
+                            </mat-select>
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="35.00">
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <mat-checkbox checked="true"></mat-checkbox>
+                        </td>
+                        <td style="margin-left:5px; width:300px">
+                          <span>Fuel, Spill Liab</span>
+                        </td>
+                        <td>
+                          <mat-icon>view_module</mat-icon>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <mat-select placeholder="939,800">
+                            </mat-select>
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="0.00">
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <mat-checkbox checked="true"></mat-checkbox>
+                        </td>
+                        <td style="margin-left:5px; width:300px">
+                          <span>Med Payments</span>
+                        </td>
+                        <td>
+                          <mat-icon>view_module</mat-icon>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <mat-select placeholder="1000">
+                            </mat-select>
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="0.00">
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <mat-checkbox checked="true"></mat-checkbox>
+                        </td>
+                        <td style="margin-left:5px; width:300px">
+                          <span>Boat Trailer</span>
+                        </td>
+                        <td>
+                          <mat-icon>view_module</mat-icon>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="6000">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <mat-select placeholder="$50">
+                            </mat-select>
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="120.00">
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <mat-checkbox checked="true"></mat-checkbox>
+                        </td>
+                        <td style="margin-left:5px; width:300px">
+                          <span>Pers Effects</span>
+                        </td>
+                        <td>
+                          <mat-icon>view_module</mat-icon>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <mat-select placeholder="500">
+                            </mat-select>
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <mat-select placeholder="$50">
+                            </mat-select>
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="5.00">
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <mat-checkbox checked="true"></mat-checkbox>
+                        </td>
+                        <td style="margin-left:5px; width:300px">
+                          <span>Uninsured Boater</span>
+                        </td>
+                        <td>
+                          <mat-icon>view_module</mat-icon>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <input matInput value="3,00,000">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="0.00">
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                    </table>
+                </div>
+              </div>
+      <div style="height:180px; overflow-x:auto">
+                  <span style="color:rgb(63,81,181);">
+                    <b> Boat Optional Coverages</b>
+                  </span>
+                  <div>
+                    <table cellspacing="0" cellpadding=0 style="width:400px; margin-top:5px; margin-left:-10px">
+                      <tr>
+                        <td>
+                          <mat-checkbox checked="true"></mat-checkbox>
+                        </td>
+                        <td style="margin-left:5px; width:300px">
+                          <span>Large Dinghy Endt</span>
+                        </td>
+                        <td>
+                          <mat-icon>view_module</mat-icon>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <input matInput value="7,500">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="0.00">
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <mat-checkbox></mat-checkbox>
+                        </td>
+                        <td style="margin-left:5px; width:300px">
+                          <span>Tender Schedule</span>
+                        </td>
+                        <td>
+                          <mat-icon>view_module</mat-icon>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <mat-checkbox checked="true"></mat-checkbox>
+                        </td>
+                        <td style="margin-left:5px; width:300px">
+                          <span>Non Owned Boat Liab</span>
+                        </td>
+                        <td>
+                          <mat-icon>view_module</mat-icon>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <mat-select placeholder="">
+                            </mat-select>
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="0.00">
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <mat-checkbox></mat-checkbox>
+                        </td>
+                        <td style="margin-left:5px; width:300px">
+                          <span>captain Liab Cvg</span>
+                        </td>
+                        <td>
+                          <mat-icon>view_module</mat-icon>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <mat-checkbox></mat-checkbox>
+                        </td>
+                        <td style="margin-left:5px; width:300px">
+                          <span>New Boat replacement</span>
+                        </td>
+                        <td>
+                          <mat-icon>view_module</mat-icon>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <mat-checkbox></mat-checkbox>
+                        </td>
+                        <td style="margin-left:5px; width:300px">
+                          <span>New</span>
+                        </td>
+                        <td>
+                          <mat-icon>view_module</mat-icon>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <mat-checkbox></mat-checkbox>
+                        </td>
+                        <td style="margin-left:5px; width:300px">
+                          <span>New</span>
+                        </td>
+                        <td>
+                          <mat-icon>view_module</mat-icon>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:100px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                        <td>
+                          <mat-form-field style="width:50px; margin-left:5px">
+                            <input matInput value="">
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+      </div>
+      </div>
+              </mat-card>
+            </div>
+          </div>
+    </div>
+ </div>
+  
+
 </div>
+
+
 <footer>
   <mat-toolbar>
-    <button mat-raised-button color="warn"><mat-icon>chevron_left</mat-icon>Policy holder</button>
+    <button mat-raised-button color="warn">
+      <mat-icon>chevron_left</mat-icon>Policy holder</button>
     <span class="ss-spacer"></span>
-    <button mat-raised-button color="warn">PreBind<mat-icon>chevron_right</mat-icon></button>
+    <button mat-raised-button color="warn">PreBind
+      <mat-icon>chevron_right</mat-icon>
+    </button>
   </mat-toolbar>
 </footer>

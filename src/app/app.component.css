@@ -18,3 +18,134 @@ footer{
   display: flex;
   flex-direction: column;
 }
+
+.wrapper-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+}
+.wrapper-content-col{
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonMenu {
+  min-width: 36px;
+  background-color: #9F9C96;
+  color: #fff;
+  padding: 0;
+  line-height: 24px;
+  height: 30px;
+}
+
+.menuSelect{
+  width: 100px;
+  border: 1px solid #9F9C96;
+  border-radius: 4px;
+  background-color: #fff;
+  flex: 0 0 auto;
+  margin: 5px;
+  height: 28px;
+}
+
+.menuSelect1 {
+  border: 1px solid #9F9C96;
+  border-radius: 4px;
+  background-color: #fff;
+  margin: 5px;
+  height: 28px;
+}
+
+.headerColor {
+  color: rgba(16, 16, 153, 0.575)
+}
+
+.fontDetail {
+  font-family: sans-serif;
+  font-size: smaller;
+}
+
+.label {
+  margin-right: 5px;
+}
+
+.labelN {
+  margin-left: 10px;
+}
+
+.calenderSize {
+  font-size:13px;
+  line-height: 24px;
+  width : 100px;
+  border: 1px solid #9F9C96;
+  border-radius: 4px;
+  background-color: #F8F1F7;
+}
+.quoteSelect{
+  width: 300px;
+}
+
+.quotebtn{
+  padding: 0;
+  min-width: auto;
+  text-decoration: underline;
+}
+
+.divBackgroud {
+  background-color: #fff;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 
+              0 2px 2px -3px rgba(0,0,0,.14), 
+              0 1px 5px -6px rgba(0,0,0,.12);
+}
+
+.toobar1 {
+  margin-top: 5px;
+  flex: 0 0 auto;
+}
+
+.toolbar2{
+  background-color: #fff;
+  padding: 0;
+}
+
+.box{
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  flex: 1 1 auto;
+  margin:5px;
+  padding: 3px;
+  overflow: auto;
+}
+
+.table{
+  width:100%;
+  border: rgb(231, 231, 231) 1px solid;
+}
+
+.table th{
+  background-color: #F6F6F9; 
+  text-align: left;
+  color:rgb(63,81,181);
+  padding: 5px;
+}
+
+.table td{
+  padding: 5px;
+}
+
+.table1 {
+  width:100%;
+}
+
+.table1 td {
+  white-space: nowrap;
+}
+
+.table1 .mat-input-container{
+  width: 100%;
+}
